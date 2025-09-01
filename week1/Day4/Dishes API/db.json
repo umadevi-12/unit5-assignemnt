@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Idly",
+    "price": 50,
+    "category": "Breakfast"
+  },
+  {
+    "id": 2,
+    "name": "Dosa",
+    "price": 60,
+    "category": "Breakfast"
+  },
+  {
+    "id": 3,
+    "name": "Pongal",
+    "price": 55,
+    "category": "Breakfast"
+  },
+  {
+    "id": 4,
+    "name": "Biryani",
+    "price": 120,
+    "category": "Lunch"
+  },
+  {
+    "id": 5,
+    "name": "Paneer Butter Masala",
+    "price": 150,
+    "category": "Dinner"
+  }
+]
