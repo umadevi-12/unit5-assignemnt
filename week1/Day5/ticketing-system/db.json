@@ -1,0 +1,23 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "title": "Sample ticket",
+      "description": "This is a sample issue.",
+      "priority": "low",
+      "user": "Alice",
+      "status": "resolved",
+      "createdAt": "2025-09-02T00:00:00.000Z",
+      "resolvedAt": "2025-09-02T17:31:22.942Z"
+    },
+    {
+      "id": 2,
+      "title": "Login Issue",
+      "description": "Cannot login",
+      "priority": "high",
+      "user": "John Doe",
+      "status": "pending",
+      "createdAt": "2025-09-02T17:30:58.556Z"
+    }
+  ]
+}
