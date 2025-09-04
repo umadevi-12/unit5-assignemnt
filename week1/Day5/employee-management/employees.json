@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "position": "Software Engineer",
+    "department": "IT",
+    "salary": 75000,
+    "status": "inactive"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "position": "HR Manager",
+    "department": "HR",
+    "salary": 65000,
+    "status": "active"
+  }
+]
+
