@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Fix login bug",
+    "description": "Resolve user login issue on production",
+    "tag": "backend",
+    "priority": "high",
+    "status": "pending"
+  },
+  {
+    "id": 2,
+    "title": "Create landing page",
+    "description": "Design and implement the frontend landing page",
+    "tag": "frontend",
+    "priority": "medium",
+    "status": "in-progress"
+  },
+  {
+    "id": 3,
+    "title": "Write API docs",
+    "description": "Document all endpoints for the task tracker API",
+    "tag": "documentation",
+    "priority": "low",
+    "status": "pending"
+  }
+]
