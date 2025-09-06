@@ -1,0 +1,66 @@
+db.recipes.find({cuisine : 'Italian'}).pretty()
+
+db.recipes.find({prep_time:{$lt:30}}).pretty();
+
+db.recipes.find({price:{$gt:500}}).pretty();
+
+db.recipes.find().sort({price:1}).pretty();
+
+db.recipes.updateOne(
+    {"recipe_id": 2},
+    {$set:{price:900}}
+)
+
+db.recipes.find({},{name:1,price:1,_id:0}).pretty();
+
+db.recipes.find({ difficulty : "medium" , price:{$lt:600}}).pretty();
+
+db.recipes.find().sort({prep_time : -1}).pretty();
+
+db.recipes.insetOne(
+{
+  "recipe_id": 11,
+  "name": "Chocolate Cake",
+  "ingredients": ["Flour", "Sugar", "Cocoa Powder", "Eggs", "Butter"],
+  "cuisine": "American",
+  "prep_time": 50,
+  "difficulty": "medium",
+  "price": 750
+
+
+});
+
+db.recipes.deleteOne({"recipe_id": 4});
+
+db.recipes.find({cuisine:{$in:["Japanese", "Thai"]}}).pretty();
+
+db.recipes.find({ingredients:'Egg'}).pretty();
+
+db.recipes.updateOne(
+    {
+        recipe_id:7 },
+       {$set:{prep_time:35}
+    }  
+);
+
+db.recipes.deleteMany({price:{$gt:1000}});
+db.recipes.find().limit(3).pretty();
+db.recipes.find().skip(2).pretty();
+
+db.recipes.find({cuisine:'Thai'}).sort({price:-1}).pretty();
+
+db.recipes.insertOne(
+{
+  recipe_id: 12,
+  name: "Hummus",
+  ingredients: ["Chickpeas", "Tahini", "Garlic", "Olive Oil", "Lemon Juice"],
+  cuisine: "Middle Eastern",
+  prep_time: 15,
+  difficulty: "easy",
+  price: 300
+});
+
+db.recipes.countDocuments({difficulty:'easy'});
+
+db.recipes.find({prep_time:{$gt:40}}).pretty()
+
