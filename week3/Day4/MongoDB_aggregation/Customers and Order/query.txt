@@ -1,0 +1,33 @@
+db.orders.aggregate([
+    {$group:{_id : "$customerId" , totalSpent : {$sum : "$amount"}}}
+]);
+
+db.orders.aggregate([
+    {
+        $lookup:{
+            from:"customers",
+            localField:"customerId",
+            foreignField: "_id",
+            as:"customerInfo"
+        }
+    }
+]);
+db.orders.aggregate([
+    {$match:{amount:{$gt:500}}}
+]);
+db.orders.aggregate([
+    {$group:{_id : "$customerId" , avgOrderAmount:{$avg:"amount"}}}
+]);
+
+db.orders.aggregate([
+    {
+        $lookup:{
+            from:"customers",
+            localField:"customerId",
+            foreignField:"_id",
+            as:"customerInfo"
+        }
+    },
+    {$unwind:"customerInfo"}
+])
+
