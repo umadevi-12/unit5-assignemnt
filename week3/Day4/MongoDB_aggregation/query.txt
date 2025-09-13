@@ -1,0 +1,48 @@
+db.sales.aggregate([
+    {$group:{_id:"$category" , totalSales:{$sum : "$amount"}}}
+]);
+
+db.sales.aggregate([
+    {
+    $group:{
+        _id:{$substr:["$date" , 0, 7]},
+        totalSales:{$sum:"$amount"}
+    }
+    }
+]);
+
+db.sales.aggregate([
+    {$group:{_id:null , avgSaleAmount:{$avg:"$amount"}}}
+]);
+
+db.sales.aggregate([
+    {
+        $group:{
+        _id:{$substr:["$date" , 0,7]},
+        saleCount:{$sum : 1}
+    }
+    }
+]);
+
+db.sales.aggregate([
+    {$group:{_id : "$region" , totalSales:{$sum:"$amount"}}}
+]);
+
+db.sales.aggregate([
+    {&group:{_id:"$product" , totalRevenue:{$sum:"$amount"}}}
+]);
+db.sales.aggregate([
+    {$group:{_id:"category" , saleCount:{$sum : 1}}}
+]);
+
+db.sales.aggregate([
+    {$group:{_id:"$region" , avgSaleAmount:{$avg:"$amount"}}}
+]);
+db.sales.aggregate([
+    {
+        $match:{category:{$in:["Electronics" , "Fashion"]}}
+    },
+    $group:{
+        $group : {_id:"$category" , totalSales:{$sum : "$amount"}}
+    }
+])
