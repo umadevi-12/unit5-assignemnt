@@ -1,0 +1,23 @@
+{
+  "name": "books-redis-cron-reporting",
+  "version": "1.0.0",
+  "description": "This project demonstrates:\r - Bulk book insertion status stored in Redis\r - A cron job that generates PDF reports and emails them to users\r - Multi-user support with Redis key isolation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.6",
+    "pdfkit": "^0.17.2",
+    "redis": "^5.8.2",
+    "uuid": "^13.0.0",
+    "winston": "^3.17.0"
+  }
+}
