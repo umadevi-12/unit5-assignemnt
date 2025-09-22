@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-time Group Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Real-time Group Chat</h2>
+
+    <div id="registration">
+        <input id="usernameInput" placeholder="Enter your username" autocomplete="off"/>
+        <input id="roomInput" placeholder="Enter room name (default: global)" autocomplete="off"/>
+        <button id="joinBtn">Join Chat</button>
+    </div>
+
+  
+    <div id="chatSection" style="display:none;">
+        <div id="online-users">Online Users:</div>
+        <div id="chat" class="chat-box"></div>
+        <input id="messageInput" placeholder="Type a message..." autocomplete="off"/>
+        <button id="sendBtn">Send</button>
+        <br>
+        <button id="adminBtn">Send Admin Msg</button>
+        <button id="switchRoomBtn">Switch Room</button>
+        <button id="disconnectBtn">Disconnect</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
