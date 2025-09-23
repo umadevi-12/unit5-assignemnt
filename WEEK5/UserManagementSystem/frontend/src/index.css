@@ -1,0 +1,302 @@
+/* ---------- Global body ---------- */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+/* ---------- Form / Login / Register styles ---------- */
+.form-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #12545b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2e5b86;
+}
+
+.message {
+  color: green;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ---------- Home container ---------- */
+.home-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.home-container h1, .home-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.home-container p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* ---------- Dashboard info ---------- */
+.dashboard-info {
+  font-weight: bold;
+  color: #9ace32;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ---------- No resources message ---------- */
+.no-resources {
+  font-weight: bold;
+  color: #c22e1e;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ---------- Create Resource Form (UserHome) ---------- */
+.create-resource-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Admin Dashboard ---------- */
+.admin-dashboard {
+  padding: 30px;
+  max-width: 900px;
+  width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.admin-dashboard h2, .admin-dashboard h3 {
+  text-align: center;
+}
+
+/* ---------- User Cards ---------- */
+.users-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.user-card {
+  flex: 1 1 200px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.user-card.admin {
+  border-left: 5px solid green;
+}
+
+.user-card.user {
+  border-left: 5px solid #3498db;
+}
+
+/* ---------- Resource Cards ---------- */
+.resources-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.resource-card {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Scrollable sections for overflow */
+.admin-dashboard .section, .resources-container {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+/* Scrollbar styling */
+.admin-dashboard .section::-webkit-scrollbar,
+.resources-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-dashboard .section::-webkit-scrollbar-thumb,
+.resources-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* ---------- Navbar / Header ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background-color: #1466b7; /* dark blue */
+  color: white;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  position: sticky;  /* stick at top */
+  top: 0;            /* stick at top */
+  z-index: 1000;     /* stay above other content */
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffcc00; /* highlight color on hover */
+}
+
+.navbar .logout-btn {
+  background: #17b13b;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.navbar .logout-btn:hover {
+  background: #2bba1e;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-container, .home-container, .admin-dashboard {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .users-container, .resources-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-card, .resource-card {
+    width: 100%;
+  }
+}
+/* ---------- Home container ---------- */
+.home-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  text-align: center;   /* centers inline text */
+  margin: 50px auto;    /* centers container horizontally */
+}
+
+/* ---------- Admin Dashboard ---------- */
+.admin-dashboard {
+  padding: 30px;
+  max-width: 900px;
+  width: 95%;
+  margin: 50px auto;    /* centers container horizontally */
+  max-height: 90vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ---------- Resource / User Cards alignment ---------- */
+.resources-container, .users-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;  /* centers child cards horizontally */
+}
